@@ -2,7 +2,7 @@
   from = "/"
   to = "/en"
   status = 301
-  force = false
+  force = true
   conditions = {Language = ["en"]}
 
   [[redirects]]
