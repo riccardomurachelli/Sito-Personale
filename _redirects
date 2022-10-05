@@ -1,0 +1,4 @@
+# Redirects from what the browser requests to what we serve
+/it/index.html      /it
+/en/index.html      /en
+/es/index.html      /es
