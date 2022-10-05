@@ -1,20 +1,47 @@
+# A redirect rule with many of the supported properties
 [[redirects]]
-  from = "/"
-  to = "/en"
-  status = 301
-  force = true
-  conditions = {Language = ["en"]}
+  from = "/*"
+  to = "/it/:splat"
 
-  [[redirects]]
-  from = "/"
-  to = "/it"
   status = 301
-  force = false 
+
+  # By default, redirects won’t be applied if there’s a file with the same
+  # path as the one defined in the `from` property. Setting `force` to `true`
+  # will make the redirect rule take precedence over any existing files.
+  force = false
+
+  # Redirect based on conditions including browser language, geolocation,
+  # identity role, and/or cookie presence.
   conditions = {Language = ["it"]}
   
-  [[redirects]]
-  from = "/"
-  to = "/es"
+# A redirect rule with many of the supported properties
+[[redirects]]
+  from = "/*"
+  to = "/en/:splat"
+
   status = 301
+
+  # By default, redirects won’t be applied if there’s a file with the same
+  # path as the one defined in the `from` property. Setting `force` to `true`
+  # will make the redirect rule take precedence over any existing files.
+  force = true
+
+  # Redirect based on conditions including browser language, geolocation,
+  # identity role, and/or cookie presence.
+  conditions = {Language = ["en"]}
+
+# A redirect rule with many of the supported properties
+[[redirects]]
+  from = "/*"
+  to = "/es/:splat"
+
+  status = 301
+
+  # By default, redirects won’t be applied if there’s a file with the same
+  # path as the one defined in the `from` property. Setting `force` to `true`
+  # will make the redirect rule take precedence over any existing files.
   force = false
+
+  # Redirect based on conditions including browser language, geolocation,
+  # identity role, and/or cookie presence.
   conditions = {Language = ["es"]}
