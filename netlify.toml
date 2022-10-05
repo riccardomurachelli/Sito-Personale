@@ -18,10 +18,3 @@
   status = 301
   force = false
   conditions = {Language = ["es"]}
-
-    [[redirects]]
-  from = "/"
-  to = "/en"
-  status = 301
-  force = false
-  conditions = {Language = ["*"]}
