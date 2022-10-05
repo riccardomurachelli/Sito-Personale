@@ -2,7 +2,6 @@
 /it/index.html      /it
 /en/index.html      /en
 /es/index.html      /es
-/*                  /en
 /it/*               /it/404.html
 /en/*               /en/404.html
 /es/*               /es/404.html
