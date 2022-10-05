@@ -1,0 +1,20 @@
+[[redirects]]
+  from = "/"
+  to = "/en"
+  status = 301
+  force = false
+  conditions = {Language = ["en"]}
+
+  [[redirects]]
+  from = "/"
+  to = "/it"
+  status = 301
+  force = false
+  conditions = {Language = ["it"]}
+
+  [[redirects]]
+  from = "/"
+  to = "/es"
+  status = 301
+  force = false
+  conditions = {Language = ["es"]}
