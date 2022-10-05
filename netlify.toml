@@ -3,7 +3,7 @@
   to = "/en"
   status = 301
   force = false
-  conditions = {Language = ["en-*"]}
+  conditions = {Language = ["en"]}
 
   [[redirects]]
   from = "/"
