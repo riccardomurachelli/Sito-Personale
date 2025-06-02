@@ -1,1 +1,255 @@
-<!DOCTYPE html><html lang="en" ><head> <meta charset="UTF-8"> <meta property="og:url" content="http://www.riccardomurachelli.it" /><meta property="og:type" content="website" /><meta property="og:title" content="Riccardo Murachelli" /><meta property="og:description" content="Hi! I'm Riccardo Murachelli, a developer from Italy!" /> <title>Language Picker</title> <link rel="stylesheet" href="./style.css"> <script data-goatcounter="https://riccardomurachelli.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></head><body><body> <section class="notFound"> <div class="img"> <img src="https://assets.codepen.io/5647096/backToTheHomepage.png" alt="Back to the Homepage"/> <img src="https://assets.codepen.io/5647096/Delorean.png" alt="El Delorean, El Doc y Marti McFly"/> </div> <div class="text"> <h2>Pick a language!</h2> <h3>Here you have:</h3> <a href="/it">Italiano</a> <a href="/en">English</a> <a href="/es">Espanol</a> </div> </section></body></body></html>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Riccardo Murachelli - Software Engineering Student" />
+    <meta name="description" content="Portfolio di Riccardo Murachelli, studente di ingegneria del software. Scopri progetti, competenze e contatti." />
+    <meta name="keywords" content="Riccardo Murachelli, software, portfolio, progetti, informatica, sviluppo, programmatore, studente, coding, developer" />
+    <meta name="author" content="Riccardo Murachelli">
+    <meta name="theme-color" content="#8b5cf6">
+    <link rel="icon" href="https://raw.githubusercontent.com/riccardomurachelli/Sito-Personale/refs/heads/main/resized_cropped.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/riccardomurachelli/Sito-Personale/refs/heads/main/resized_cropped.png" type="image/png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://riccardomurachelli.it/" />
+    <meta property="og:title" content="Riccardo Murachelli - Software Engineering Student" />
+    <meta property="og:description" content="Portfolio di Riccardo Murachelli, studente di ingegneria del software. Scopri progetti, competenze e contatti." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/riccardomurachelli/Sito-Personale/refs/heads/main/resized_cropped.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://riccardomurachelli.it/" />
+    <meta property="twitter:title" content="Riccardo Murachelli - Software Engineering Student" />
+    <meta property="twitter:description" content="Portfolio di Riccardo Murachelli, studente di ingegneria del software. Scopri progetti, competenze e contatti." />
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/riccardomurachelli/Sito-Personale/refs/heads/main/resized_cropped.png" />
+    <meta name="keywords" content="Riccardo Murachelli, software, portfolio, progetti, informatica, sviluppo, programmatore, studente, coding, developer" />
+    <meta name="author" content="Riccardo Murachelli">
+    <meta name="theme-color" content="#8b5cf6">
+    <title>Riccardo Murachelli - Software Engineering Student</title>
+    <!-- Iubenda Cookie Solution -->
+    <script type="text/javascript">
+        var _iub = _iub || [];
+        _iub.csConfiguration = {
+            "askConsentAtCookiePolicyUpdate": true,
+            "enableFadp": true,
+            "enableLgpd": true,
+            "enableUspr": true,
+            "fadpApplies": true,
+            "floatingPreferencesButtonDisplay": "bottom-right",
+            "perPurposeConsent": true,
+            "siteId": 3280232,
+            "usprApplies": true,
+            "whitelabel": false,
+            "cookiePolicyId": 84522575,
+            "lang": (navigator.language || navigator.userLanguage || "it").slice(0,2),
+            "banner": {
+                "acceptButtonDisplay": true,
+                "backgroundOverlay": true,
+                "closeButtonDisplay": false,
+                "customizeButtonDisplay": true,
+                "explicitWithdrawal": true,
+                "listPurposes": true,
+                "position": "float-bottom-center",
+                "rejectButtonDisplay": true
+            }
+        };
+    </script>
+    <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3280232.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+    <!-- End Iubenda Cookie Solution -->
+    <script data-goatcounter="https://riccardomurachelli.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="particles" id="particles"></div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="resized_cropped.png" alt="Riccardo Murachelli Logo" width="40" height="40" style="border-radius: 50%; object-fit: cover;">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            <div class="theme-controls">
+                <select class="lang-selector" id="langSelector">
+                    <option value="it">🇮🇹 IT</option>
+                    <option value="en">🇬🇧 EN</option>
+                    <option value="es">🇪🇸 ES</option>
+                </select>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <h1 id="typewriter" style="display:inline;"></h1>
+                    <p class="subtitle" id="subtitleTypewriter" data-i18n="hero.subtitle"></p>
+                    <p class="age" id="ageDisplay"></p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary" data-i18n="hero.getInTouch">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content fade-in">
+                    <div class="about-text">
+                        <h2 data-i18n="about.title">About Me</h2>
+                        <p data-i18n="about.description">
+                            Ciao! Sono uno studente di informatica alle superiori con una grande passione per lo sviluppo software. 
+                            Mi piace esplorare nuove tecnologie e creare soluzioni innovative che possano fare la differenza.
+                        </p>
+                        <div class="certification">
+                            <h3 data-i18n="about.certification">English Certification</h3>
+                            <p><strong>EF SET C2 Proficiency</strong> - 74/100</p>
+                            <a href="https://cert.efset.org/it/MmJav7" target="_blank" class="project-link" data-i18n="about.viewCert">View Certificate →</a>
+                        </div>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">💻</div>
+                            <h3>C++</h3>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">☕</div>
+                            <h3>Java</h3>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">⚡</div>
+                            <h3>JavaScript</h3>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🐍</div>
+                            <h3>Python</h3>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">📱</div>
+                            <h3>Kotlin</h3>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🎨</div>
+                            <h3>Bootstrap 5</h3>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">📝</div>
+                            <h3>CMS</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="fade-in">
+                    <h2 style="text-align: center; font-size: 3rem; margin-bottom: 2rem; background: linear-gradient(135deg, var(--accent), #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-i18n="projects.title">My Projects</h2>
+                    
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <h3>Convertami</h3>
+                            <p data-i18n="projects.convertami.description">
+                                Un tool innovativo pensato per semplificare i processi di conversione, 
+                                offrendo soluzioni efficienti e veloci per trasformare dati e formati.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/riccardomurachelli/convertami" target="_blank" class="project-link" data-i18n="projects.viewCode">View Code →</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3>Digital Reports</h3>
+                            <p data-i18n="projects.digitalreports.description">
+                                Un'applicazione desktop progettata per aiutare il corpo di Polizia Locale a tenere traccia 
+                                dei report in maniera digitale. Gestisce turni di lavoro, attività, mezzi e infrazioni.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Tkinter</span>
+                                <span class="tech-tag">SQLite</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/riccardomurachelli/digital_reports" target="_blank" class="project-link" data-i18n="projects.viewCode">View Code →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-content fade-in">
+                    <h2 data-i18n="contact.title">Let's Connect</h2>
+                    <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;" data-i18n="contact.description">
+                        Interessato a collaborare o semplicemente fare una chiacchierata? Contattami!
+                    </p>
+                    
+                    <div class="social-links">
+                        <a href="mailto:requests@riccardomurachelli.it" class="social-link">
+                            <span>📧</span>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://github.com/riccardomurachelli" target="_blank" class="social-link">
+                            <span>💻</span>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/riccardo-murachelli-25621b270/" target="_blank" class="social-link">
+                            <span>💼</span>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.instagram.com/riccardomurachell_/#" target="_blank" class="social-link">
+                            <span>📸</span>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://t.me/riccardomurachelli" target="_blank" class="social-link">
+                            <span>💬</span>
+                            <span>Telegram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>
+                <span id="currentYear"></span>, Riccardo Murachelli. 
+                <span data-i18n="footer.license">CC0 1.0 Universal license.</span>
+                <span>
+                    Open-Source on
+                    <a href="https://www.github.com/riccardomurachelli/Sito-personale" target="_blank">GitHub</a>.
+                </span>
+            </p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+            <p data-i18n="footer.madeWith">
+                Made with ❤️ using HTML, CSS, and JavaScript.
+            </p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
